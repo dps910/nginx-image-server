@@ -37,7 +37,10 @@ In `/etc/nginx/sites-available/yourdomain` do the following:
 Symlink `sites-available/yourdomain` to `sites-enabled`:
 - `sudo ln -s /etc/nginx/sites-available/yourdomain /etc/nginx/sites-enabled`
 
+Restart nginx so that changes take effect `systemctl restart nginx`. Use `systemctl status nginx` to check if the service loaded and it's working.
+
 You're done with the server side of things! Now you just need to set up HTTPS, which I am not going to cover. You can use Cloudflare for this, no need for certbot.
+
 
 ## Configuring ShareX (Windows)
 Set up the destination using your domain. It should look similar to this image:
